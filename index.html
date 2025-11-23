@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rajdharama.com - The Righteous Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #FDF5E6; /* raj-sandstone */
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D9C8B4' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'raj-maroon': '#800000',      // Regal maroon
+              'raj-sandstone': '#FDF5E6', // Aged parchment/sandstone
+              'raj-sepia': '#5D4037',      // Rich, dark sepia for text
+              'raj-antique-gold': '#D4AF37',// Burnished, antique gold
+              'raj-antique-gold-dark': '#B8860B',
+              'raj-saffron': '#F9A825' // Sacred saffron for the Dharma Seal
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            animation: {
+              'fadeInUp': 'fadeInUp 0.6s ease-out forwards',
+              'regalGlowGold': 'regalGlowGold 2.5s ease-in-out infinite',
+              'regalGlowSaffron': 'regalGlowSaffron 2s ease-in-out infinite',
+              'fadeIn': 'fadeIn 0.3s ease-out forwards',
+              'slideInLeft': 'slideInLeft 0.3s ease-out forwards',
+              'floatUp': 'floatUp 1s cubic-bezier(0.645, 0.045, 0.355, 1.000) forwards',
+              'zoomInFade': 'zoomInFade 0.8s ease-out forwards',
+              'revealIn3D': 'revealIn3D 1.2s cubic-bezier(0.645, 0.045, 0.355, 1.000) forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              regalGlowGold: {
+                '0%, 100%': { boxShadow: '0 0 12px 3px rgba(212, 175, 55, 0.5)' },
+                '50%': { boxShadow: '0 0 20px 8px rgba(212, 175, 55, 0.3)' },
+              },
+              regalGlowSaffron: {
+                '0%, 100%': { boxShadow: '0 0 8px 0px rgba(249, 168, 37, 0.7)' },
+                '50%': { boxShadow: '0 0 14px 4px rgba(249, 168, 37, 0.5)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideInLeft: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(0)' },
+              },
+              floatUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              zoomInFade: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              revealIn3D: {
+                '0%': { opacity: '0', transform: 'translateY(60px) rotateX(-20deg) scale(0.9)' },
+                '100%': { opacity: '1', transform: 'translateY(0) rotateX(0deg) scale(1)' },
+              },
+            },
+            backdropBlur: {
+              lg: '12px',
+            },
+            transitionTimingFunction: {
+              'ease-regal': 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-raj-sandstone">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
